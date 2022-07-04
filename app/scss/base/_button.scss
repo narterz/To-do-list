@@ -1,0 +1,7 @@
+@use 'typography' as type;
+
+.btn-md {
+      border-radius: 20px;
+      font-size: map-get(map-get(type.$font , size ), small);
+
+}

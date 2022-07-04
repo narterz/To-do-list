@@ -1,0 +1,57 @@
+@use 'colorPallete' as color;
+*,
+*::before,
+*::after {
+      box-sizing: border-box;
+}
+
+html,
+body,
+div,
+form,
+input,
+h1,
+h2,
+h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      font: inherit;
+      text-rendering: optimizeLegibility;
+}
+
+body {
+      line-height: 1;
+      background-color: map-get(map-get(color.$colorPallete , base ), background);
+      
+}
+
+ul {
+      list-style-type: none;
+}
+
+li {
+      display: inline;
+}
+
+button {
+      opacity: 1;
+      transition: opacity 250ms ease-in;
+      cursor: pointer;
+      font-size: 2rem;
+      text-align: center;
+      background-color: map-get(map-get(color.$colorPallete , base ), background);
+      border: none;
+}
+
+button:hover {
+      opacity: 0.9;
+}
+
+input {
+      border: 1px solid  map-get(map-get(color.$colorPallete , card ), border);
+}
+
+footer {
+      height: 10vh;
+}
